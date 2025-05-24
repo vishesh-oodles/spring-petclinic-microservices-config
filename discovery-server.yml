@@ -8,5 +8,5 @@ eureka:
   server:
     maxThreadsForPeerReplication: 0
   dashboard:
-    path: /
+    path: /eureka
 
