@@ -1,7 +1,7 @@
 ﻿server:
   port: 8761
   servlet:
-    context-path: /
+    context-path: /eureka
 
 eureka:
   client:
