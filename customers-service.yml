@@ -31,6 +31,6 @@ management:
   boot:
     admin:
       client:
-        url: http://admin-server:9091
+        url: http://admin-server:9091/admin
         instance:
           service-base-url: http://customers-service:8081
