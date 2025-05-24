@@ -82,7 +82,7 @@ spring:
       on-profile: mysql
   datasource:
     url: jdbc:mysql://mysql:3306/petclinic?allowPublicKeyRetrieval=true&useSSL=false
-    username: root
+    username: petclinic
     password: petclinic
   sql:
     init:
