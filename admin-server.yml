@@ -1,5 +1,8 @@
 server:
   port: 9091
+  servlet:
+    context-path: /admin
+
 
 ---
 spring:
@@ -12,7 +15,7 @@ spring:
 
   boot:
     admin:
-      context-path: /
+      context-path: /admin
       adminServer:
         enabled: true
       client:
