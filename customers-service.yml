@@ -33,4 +33,4 @@ spring:
       client:
         url: http://admin-server:9091
         instance:
-          service-base-url: http://customers-service:8081
+          service-base-url: http://api-gateway:8080/api/customers
