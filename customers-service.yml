@@ -24,9 +24,9 @@ management:
       endpoint: http://tracing-server:9411/api/v2/spans
 
   boot:
-  admin:
-    client:
-      url: http://admin-server:9091
-      instance:
-        prefer-ip: true
-        service-base-url: http://api-gateway:8080/api/customers
+    admin:
+      client:
+        url: http://admin-server:9091
+        instance:
+          prefer-ip: true
+          service-base-url: http://api-gateway:8080/api/customers
