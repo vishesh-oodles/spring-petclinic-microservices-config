@@ -7,18 +7,16 @@ spring:
     activate:
       on-profile: docker
 
-
   application:
     name: admin-server
+
   boot:
     admin:
-      # Enabling Spring Boot Admin Server
+      context-path: /
       adminServer:
         enabled: true
       client:
-        # You can leave this empty if the server isn't acting as a client
         url: http://admin-server:9091
-      context-path: /
 
   cloud:
     config:
@@ -27,4 +25,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka/eureka/
+      defaultZone: http://discovery-server:8761/eureka/
