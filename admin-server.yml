@@ -18,7 +18,6 @@ spring:
       client:
         # You can leave this empty if the server isn't acting as a client
         url: http://admin-server:9090
-      context-path: /admin
 
 eureka:
   client:
