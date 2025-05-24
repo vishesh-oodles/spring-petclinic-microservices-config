@@ -29,4 +29,4 @@ management:
         url: http://admin-server:9091
         instance:
           prefer-ip: true
-          service-base-url: http://api-gateway:8080/api/customers
+          service-base-url: http://customers-service:8081
