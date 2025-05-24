@@ -23,10 +23,6 @@ management:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
 
-  endpoint:
-    health:
-      show-details: always
-
 spring:
   boot:
     admin:
