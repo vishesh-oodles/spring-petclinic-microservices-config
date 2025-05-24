@@ -26,6 +26,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+  instance:
+    prefer-ip-address: false
+    hostname: api-gateway
+    non-secure-port: 8080
+
 management:
   zipkin:
     tracing:
