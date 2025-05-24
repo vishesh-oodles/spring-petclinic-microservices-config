@@ -2,28 +2,25 @@ server:
   port: 9091
   servlet:
     context-path: /admin
-
+    
+spring:
+  application:
+    name: admin-server
+  boot:
+    admin:
+      # Enabling Spring Boot Admin Server
+      adminServer:
+        enabled: true
+      client:
+        # You can leave this empty if the server isn't acting as a client
+        url: http://admin-server:9091
+      context-path: /admin
 
 ---
 spring:
   config:
     activate:
       on-profile: docker
-
-  application:
-    name: admin-server
-
-  boot:
-    admin:
-      context-path: /admin
-      adminServer:
-        enabled: true
-      client:
-        url: http://admin-server:9091
-
-  cloud:
-    config:
-      enabled: false
 
 eureka:
   client:
