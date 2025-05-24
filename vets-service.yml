@@ -24,6 +24,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+  instance:
+    prefer-ip-address: false
+    hostname: vets-service
+    non-secure-port: 8083
 management:
   zipkin:
     tracing:
