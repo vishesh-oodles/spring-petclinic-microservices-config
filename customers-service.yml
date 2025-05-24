@@ -22,3 +22,15 @@ management:
   zipkin:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
+
+  endpoint:
+    health:
+      show-details: always
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://admin-server:9091
+        instance:
+          service-base-url: http://customers-service:8081
