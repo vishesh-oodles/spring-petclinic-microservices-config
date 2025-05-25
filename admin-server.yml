@@ -1,7 +1,7 @@
 server:
   port: 9091
-  servlet:
-    context-path: /admin
+  # servlet:
+  #   context-path: /admin
 
 
 ---
@@ -20,7 +20,7 @@ spring:
       client:
         # You can leave this empty if the server isn't acting as a client
         url: http://admin-server:9091
-      context-path: /admin 
+      # context-path: /admin 
 
   cloud:
     config:
