@@ -1,5 +1,7 @@
 server:
   port: 9411
+  servlet:
+    context-path: /zipkin
 
 ---
 spring:
