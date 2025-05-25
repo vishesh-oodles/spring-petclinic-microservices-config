@@ -4,7 +4,12 @@ server:
     context-path: /admin
 
 
+---
 spring:
+  config:
+    activate:
+      on-profile: docker
+      
   application:
     name: admin-server
   boot:
@@ -28,13 +33,6 @@ management:
         include: "*"
     health:
       show-details: always
-
-
----
-spring:
-  config:
-    activate:
-      on-profile: docker
 
 eureka:
   client:
