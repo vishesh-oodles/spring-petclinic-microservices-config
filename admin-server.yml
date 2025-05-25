@@ -2,8 +2,6 @@ server:
   port: 9091
   servlet:
     context-path: /admin
-  forward-headers-strategy: framework
-
 
 ---
 spring:
@@ -22,6 +20,7 @@ spring:
            #You can leave this empty if the server isn't acting as a client
         url: http://admin-server:9091
       context-path: /admin 
+      
 
   # cloud:
   #   config:
@@ -31,3 +30,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/eureka/
+  instance:
+    prefer-ip-address: false
+    hostname: admin-server
+    non-secure-port: 9091
