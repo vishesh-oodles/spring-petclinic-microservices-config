@@ -23,7 +23,7 @@ spring:
   boot:
     admin:
       ui:
-        public-url: http://34.93.136.175/admin
+        public-url: http://admin-server:9091/admin
 
 
 ---
