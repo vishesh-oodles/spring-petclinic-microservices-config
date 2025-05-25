@@ -10,16 +10,16 @@ spring:
     activate:
       on-profile: docker
       
-  application:
-    name: admin-server
-  boot:
-    admin:
-      # Enabling Spring Boot Admin Server
-      adminServer:
-        enabled: true
-      client:
-           #You can leave this empty if the server isn't acting as a client
-        url: http://admin-server:9091
+  # application:
+  #   name: admin-server
+  # boot:
+  #   admin:
+  #     # Enabling Spring Boot Admin Server
+  #     adminServer:
+  #       enabled: true
+  #     client:
+  #          #You can leave this empty if the server isn't acting as a client
+  #       url: http://admin-server:9091
       # context-path: /admin 
 
   # cloud:
