@@ -2,6 +2,7 @@ server:
   port: 9091
   servlet:
     context-path: /admin
+  forward-headers-strategy: framework
 
 
 spring:
@@ -9,9 +10,6 @@ spring:
     name: admin-server
   boot:
     admin:
-      # Enabling Spring Boot Admin Server
-      adminServer:
-        enabled: true
       client:
         # You can leave this empty if the server isn't acting as a client
         url: http://admin-server:9091
