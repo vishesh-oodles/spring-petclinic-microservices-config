@@ -22,3 +22,7 @@ eureka:
     service-url:
       defaultZone: http://discovery-server:8761/eureka-service/  # Single path element
 
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static/
