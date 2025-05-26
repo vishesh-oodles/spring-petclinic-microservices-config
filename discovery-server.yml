@@ -1,12 +1,32 @@
-﻿server:
+# ﻿server:
+#   port: 8761
+#   servlet:
+#     context-path: /eureka
+
+# eureka:
+#   client:
+#     registerWithEureka: false
+#     fetchRegistry: false
+#   server:
+#     maxThreadsForPeerReplication: 0
+
+server:
   port: 8761
   servlet:
-    context-path: /eureka
+    context-path: /  # Explicitly set root context
+
+spring:
+  application:
+    name: discovery-server
 
 eureka:
+  dashboard:
+    path: /  # Dashboard at root
+  instance:
+    appname: discovery-server
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    maxThreadsForPeerReplication: 0
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://discovery-server:8761/  # No /eureka suffix
 
