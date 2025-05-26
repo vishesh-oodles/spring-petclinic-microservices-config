@@ -13,11 +13,6 @@
 server:
   port: 8761
   servlet:
-    context-path: /
-
-server:
-  port: 8761
-  servlet:
     context-path: /eureka-service
 
 eureka:
