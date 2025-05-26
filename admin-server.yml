@@ -54,30 +54,17 @@ spring:
       
   application:
     name: admin-server
-    
   boot:
     admin:
       ui:
         public-url: http://34.93.136.175:31081/admin
-      context-path: /admin
+      # context-path: /admin
       cors:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
       client:
         enabled: false
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-      base-path: /actuator
-  endpoint:
-    health:
-      show-details: always
-    info:
-      enabled: true
 
 eureka:
   client:
