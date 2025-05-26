@@ -68,7 +68,7 @@ spring:
 management:
   endpoints:
     web:
-      base-path: http://34.93.136.175:31081/admin  # Relative to context-path
+      base-path: /admin  # Relative to context-path
       exposure:
         include: "*"  # Expose all endpoints
   endpoint:
