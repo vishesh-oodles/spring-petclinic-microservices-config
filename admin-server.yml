@@ -59,7 +59,7 @@ spring:
       adminServer:
         enabled: true
       client:
-        url: http://admin-server:9091
+        url: http://admin-server:9091/admin
       ui:
         public-url: http://34.93.136.175:31081/admin
       context-path: /admin
