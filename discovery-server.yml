@@ -1,19 +1,7 @@
-# ﻿server:
-#   port: 8761
-#   servlet:
-#     context-path: /eureka
-
-# eureka:
-  # client:
-  #   registerWithEureka: false
-  #   fetchRegistry: false
-  # server:
-  #   maxThreadsForPeerReplication: 0
-
-server:
+﻿server:
   port: 8761
   servlet:
-    context-path: /eureka-service
+    context-path: /eureka
 
 eureka:
   client:
@@ -21,6 +9,3 @@ eureka:
     fetchRegistry: false
   server:
     maxThreadsForPeerReplication: 0
-  dashboard:
-    enabled: true
-    path: /  # Serve dashboard at root of context path
