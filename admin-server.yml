@@ -1,29 +1,59 @@
+# server:
+#   port: 9091
+#   servlet:
+#     context-path: /admin
+
+# ---
+# spring:
+#   config:
+#     activate:
+#       on-profile: docker
+
+
+#   application:
+#     name: admin-server
+#   boot:
+#     admin:
+#       ui:
+#         public-url: http://34.93.136.175:31081/admin
+#       context-path: /admin
+#       cors:
+#         allowed-origins: "*"
+#         allowed-methods: "*"
+#         allowed-headers: "*"
+
+# management:
+
+#   boot:
+#     admin:
+#       client:
+#         url: http://admin-server:9091/admin
+#         instance:
+#           service-base-url: http://admin-server:9091
+        
+
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://discovery-server:8761/eureka/eureka/
+#   instance:
+#     prefer-ip-address: false
+#     hostname: admin-server
+#     non-secure-port: 9091
+
 server:
   port: 9091
   servlet:
     context-path: /admin
 
----
 spring:
   config:
     activate:
       on-profile: docker
       
-  # application:
-  #   name: admin-server
-  # boot:
-  #   admin:
-  #     # Enabling Spring Boot Admin Server
-  #     adminServer:
-  #       enabled: true
-  #     client:
-  #          #You can leave this empty if the server isn't acting as a client
-  #       url: http://admin-server:9091
-  #     context-path: /admin 
-
-
   application:
     name: admin-server
+    
   boot:
     admin:
       ui:
@@ -33,20 +63,25 @@ spring:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
-
-management:
-
-  boot:
-    admin:
+        # For self-monitoring
       client:
         url: http://admin-server:9091/admin
         instance:
-          service-base-url: http://admin-server:9091
-        
+          service-url: http://admin-server:9091/admin
+          management-url: http://localhost:9091/admin/actuator
+          health-url: http://localhost:9091/admin/actuator/health
 
-  # cloud:
-  #   config:
-  #     enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+    info:
+      enabled: true
 
 eureka:
   client:
