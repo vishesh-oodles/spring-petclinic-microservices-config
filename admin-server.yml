@@ -63,10 +63,21 @@ spring:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
-      client:
-        url: http://admin-server:9091/admin
-        instance:
-          service-base-url: http://admin-server:9091
+        
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator  # Relative to context-path
+      exposure:
+        include: "*"  # Expose all endpoints
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+    info:
+      enabled: true
 
 
 
@@ -74,6 +85,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/eureka/
+  instance:
+    health-check-url-path: /admin/actuator/health  # Full path
+    status-page-url-path: /admin/actuator/info
+    prefer-ip-address: false
+    hostname: admin-server
+    non-secure-port: 9091
+    metadata-map:
+      management.context-path: /admin/actuator 
   # instance:
   #   prefer-ip-address: false
   #   hostname: admin-server
