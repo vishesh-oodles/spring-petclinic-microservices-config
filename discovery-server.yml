@@ -15,6 +15,11 @@ server:
   servlet:
     context-path: /
 
+server:
+  port: 8761
+  servlet:
+    context-path: /eureka-service
+
 eureka:
   client:
     registerWithEureka: false
@@ -23,5 +28,4 @@ eureka:
     maxThreadsForPeerReplication: 0
   dashboard:
     enabled: true
-    path: /eureka  # Dashboard will be at /eureka
-    resourcePath: classpath:/static/eureka/
+    path: /  # Serve dashboard at root of context path
