@@ -86,13 +86,13 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/eureka/
   instance:
-    health-check-url-path: /admin/actuator/health  # Full path
-    status-page-url-path: /admin/actuator/info
+    health-check-url-path: /admin/admin/actuator/health  # Full path
+    status-page-url-path: /admin/admin/actuator/info
     prefer-ip-address: false
     hostname: admin-server
     non-secure-port: 9091
     metadata-map:
-      management.context-path: /admin/actuator 
+      management.context-path: /admin/admin/actuator 
   # instance:
   #   prefer-ip-address: false
   #   hostname: admin-server
