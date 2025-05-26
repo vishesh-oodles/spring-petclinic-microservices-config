@@ -64,13 +64,6 @@ spring:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
-        # For self-monitoring
-      client:
-        url: http://admin-server:9091/admin
-        instance:
-          service-url: http://admin-server:9091
-          management-url: http://localhost:9091/admin/actuator
-          health-url: http://localhost:9091/admin/actuator/health
 
 management:
   endpoints:
