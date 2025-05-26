@@ -28,12 +28,14 @@ spring:
     admin:
       ui:
         public-url: http://34.93.136.175:31081/admin
+        instance:
+          service-base-url: http://admin-server:9091
       context-path: /admin
       cors:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
-      
+        
 
   # cloud:
   #   config:
