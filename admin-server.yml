@@ -63,6 +63,12 @@ spring:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
+      client:
+        url: http://admin-server:9091/admin
+        instance:
+          service-base-url: http://admin-server:9091
+
+
 
 eureka:
   client:
