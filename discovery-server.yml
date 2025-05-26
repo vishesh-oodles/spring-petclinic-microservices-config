@@ -13,16 +13,20 @@
 server:
   port: 8761
   servlet:
-    context-path: /eureka-service  # Custom base path
+    context-path: /eureka-service
 
 eureka:
   dashboard:
-    path: /  # Dashboard at /eureka-service/
+    enabled: true
+    path: /  # Dashboard at root of context path
   client:
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka-service/  # Single path element
+    register-with-eureka: false
+    fetch-registry: false
 
 spring:
   web:
     resources:
-      static-locations: classpath:/static/
+      static-locations: classpath:/eureka/  # Specific to Eureka's resource location
+      add-mappings: true
+  mvc:
+    static-path-pattern: /eureka-service/**
