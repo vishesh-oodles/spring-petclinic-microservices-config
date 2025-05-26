@@ -33,6 +33,11 @@ spring:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
+      # Add these client configurations
+      client:
+        url: http://admin-server:9091/admin
+        instance:
+          service-url: http://admin-server:9091/admin
         
 
   # cloud:
