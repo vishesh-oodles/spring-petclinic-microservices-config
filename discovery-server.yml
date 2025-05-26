@@ -4,11 +4,11 @@
 #     context-path: /eureka
 
 # eureka:
-#   client:
-#     registerWithEureka: false
-#     fetchRegistry: false
-#   server:
-#     maxThreadsForPeerReplication: 0
+  # client:
+  #   registerWithEureka: false
+  #   fetchRegistry: false
+  # server:
+  #   maxThreadsForPeerReplication: 0
 
 server:
   port: 8761
@@ -16,17 +16,11 @@ server:
     context-path: /eureka-service
 
 eureka:
-  dashboard:
-    enabled: true
-    path: /  # Dashboard at root of context path
   client:
-    register-with-eureka: false
-    fetch-registry: false
-
-spring:
-  web:
-    resources:
-      static-locations: classpath:/eureka/  # Specific to Eureka's resource location
-      add-mappings: true
-  mvc:
-    static-path-pattern: /eureka-service/**
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    maxThreadsForPeerReplication: 0
+  dashboard:
+    path: /
+    resourcePath: classpath:/static/eureka/
