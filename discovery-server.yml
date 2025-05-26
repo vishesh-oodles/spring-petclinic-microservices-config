@@ -13,20 +13,12 @@
 server:
   port: 8761
   servlet:
-    context-path: /  # Explicitly set root context
-
-spring:
-  application:
-    name: discovery-server
+    context-path: /eureka-service  # Custom base path
 
 eureka:
   dashboard:
-    path: /  # Dashboard at root
-  instance:
-    appname: discovery-server
+    path: /  # Dashboard at /eureka-service/
   client:
-    register-with-eureka: false
-    fetch-registry: false
     service-url:
-      defaultZone: http://discovery-server:8761/  # No /eureka suffix
+      defaultZone: http://discovery-server:8761/eureka-service/  # Single path element
 
