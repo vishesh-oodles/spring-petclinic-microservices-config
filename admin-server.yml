@@ -1,46 +1,3 @@
-# server:
-#   port: 9091
-#   servlet:
-#     context-path: /admin
-
-# ---
-# spring:
-#   config:
-#     activate:
-#       on-profile: docker
-
-
-#   application:
-#     name: admin-server
-#   boot:
-#     admin:
-#       ui:
-#         public-url: http://34.93.136.175:31081/admin
-#       context-path: /admin
-#       cors:
-#         allowed-origins: "*"
-#         allowed-methods: "*"
-#         allowed-headers: "*"
-
-# management:
-
-#   boot:
-#     admin:
-#       client:
-#         url: http://admin-server:9091/admin
-#         instance:
-#           service-base-url: http://admin-server:9091
-        
-
-# eureka:
-#   client:
-#     serviceUrl:
-#       defaultZone: http://discovery-server:8761/eureka/eureka/
-#   instance:
-#     prefer-ip-address: false
-#     hostname: admin-server
-#     non-secure-port: 9091
-
 server:
   port: 9091
   # servlet:
@@ -58,7 +15,7 @@ spring:
     admin:
       ui:
         public-url: http://34.93.136.175:31081/admin
-      # context-path: /admin
+      context-path: /admin
       cors:
         allowed-origins: "*"
         allowed-methods: "*"
