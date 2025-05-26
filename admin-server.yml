@@ -68,7 +68,7 @@ spring:
 management:
   endpoints:
     web:
-      base-path: /actuator  # Relative to context-path
+      base-path: http://34.93.136.175:31081/admin  # Relative to context-path
       exposure:
         include: "*"  # Expose all endpoints
   endpoint:
@@ -86,8 +86,6 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/eureka/
   instance:
-    health-check-url-path: http://34.93.136.175:31081/admin
-    status-page-url-path: http://34.93.136.175:31081/admin
     prefer-ip-address: false
     hostname: admin-server
     non-secure-port: 9091
