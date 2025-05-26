@@ -45,7 +45,8 @@ server:
   port: 9091
   servlet:
     context-path: /admin
-
+    
+---
 spring:
   config:
     activate:
@@ -67,7 +68,7 @@ spring:
       client:
         url: http://admin-server:9091/admin
         instance:
-          service-url: http://admin-server:9091/admin
+          service-url: http://admin-server:9091
           management-url: http://localhost:9091/admin/actuator
           health-url: http://localhost:9091/admin/actuator/health
 
