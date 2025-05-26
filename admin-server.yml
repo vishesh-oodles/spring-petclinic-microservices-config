@@ -64,7 +64,7 @@ spring:
         allowed-methods: "*"
         allowed-headers: "*"
       client:
-        enabled: false
+        enabled: true
 
 eureka:
   client:
