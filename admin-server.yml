@@ -43,8 +43,8 @@
 
 server:
   port: 9091
-  servlet:
-    context-path: /admin
+  # servlet:
+  #   context-path: /admin
     
 ---
 spring:
@@ -63,21 +63,6 @@ spring:
         allowed-origins: "*"
         allowed-methods: "*"
         allowed-headers: "*"
-        
-
-management:
-  endpoints:
-    web:
-      base-path: /health  # Relative to context-path
-      exposure:
-        include: "*"  # Expose all endpoints
-  endpoint:
-    health:
-      show-details: always
-      probes:
-        enabled: true
-    info:
-      enabled: true
 
 
 
