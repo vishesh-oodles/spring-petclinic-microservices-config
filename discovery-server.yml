@@ -10,9 +10,3 @@ eureka:
   server:
     maxThreadsForPeerReplication: 0
 
-spring:
-  security:
-    user:
-      name: eureka
-      password: eureka
-
