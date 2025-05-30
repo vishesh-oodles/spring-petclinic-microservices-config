@@ -20,7 +20,7 @@ eureka:
       defaultZone: http://discovery-server:8761/eureka/eureka/
       # defaultZone: http://eureka:eureka@discovery-server:8761/eureka/eureka/
   instance:
-    prefer-ip-address: false
+    prefer-ip-address: true
     hostname: customers-service
     non-secure-port: 8081
 
