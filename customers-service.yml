@@ -29,9 +29,9 @@ management:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
       
-  # boot:
-  #   admin:
-  #     client:
-  #       url: http://admin-server:9091/admin
-  #       instance:
-  #         service-base-url: http://customers-service:8081
+  boot:
+    admin:
+      client:
+        url: http://admin-server:9091/admin
+        instance:
+          service-base-url: http://customers-service:8081
