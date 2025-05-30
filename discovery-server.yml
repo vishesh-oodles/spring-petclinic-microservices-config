@@ -9,8 +9,3 @@ eureka:
     fetchRegistry: false
   server:
     maxThreadsForPeerReplication: 0
-
-spring:
-  security:
-    filter:
-      disable: true
