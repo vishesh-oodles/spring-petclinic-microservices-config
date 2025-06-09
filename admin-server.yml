@@ -14,7 +14,7 @@ spring:
   boot:
     admin:
       ui:
-        public-url: http://35.244.33.210:30640/admin
+        public-url: http://35.244.33.210:31337/admin
       context-path: /admin
       cors:
         allowed-origins: "*"
